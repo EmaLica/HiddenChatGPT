@@ -1,35 +1,19 @@
 {
     "manifest_version": 2,
-  "name": "Chrome Plugin",
-  "description": "Testing Plugin",
-  "version": "1.0",
-  "content_scripts":[
-      {
-        "matches":[
-          "http://oracle.com/*"
-        ],
-        "js": ["content.js"]
-      }
+    "name": "Highlighted Text Extension",
+    "version": "1.0",
+    "description": "Displays an alert with the highlighted text.",
+    "permissions": [
+        "activeTab"
     ],
-  "browser_action": {
-      "default_icon": "copy.png"
-    },
-  "background": {
-        "scripts": ["background.js"],
-        "persistent": false
-      },
-  "permissions": [
-      "activeTab",
-      "storage"
-    ],
-    "commands" : {
-        "calcola" : {
-            "suggested_key" : {
-                "default" : "Ctrl+Shift+1"
-            },
-            "description" :"Testing Plugin"
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ]
         }
-    }
-
-
-  }
+    ]
+}
