@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
   "name": "Chrome Plugin",
-  "description": "Testing Plugin",
+  "description": "OpenAI Query",
   "version": "1.0",
   "content_scripts":[
       {
@@ -12,7 +12,7 @@
       }
     ],
   "browser_action": {
-      "default_icon": "copy.png"
+      "default_icon": "icon.png"
     },
   "background": {
         "scripts": ["background.js"],
@@ -27,7 +27,7 @@
             "suggested_key" : {
                 "default" : "Ctrl+Shift+1"
             },
-            "description" :"Testing Plugin"
+            "description" :"OpenAI Query"
         }
     }
 
